@@ -1,0 +1,273 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+
+@font-open-sans: 'Open Sans', sans-serif;
+
+
+@import "mixing.less";
+
+/* Base styles
+   ========================= */
+
+* {
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.4;
+	height: 100%;
+	font-family: @font-open-sans;
+}
+
+.container {
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+
+.start {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	background: url("../img/index_bg.jpg") right bottom no-repeat;
+	background-size: cover;
+
+	.start-inner {
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		position: relative;
+	}
+
+	.enter {
+		color: #fff;
+		height: 34px;
+		font-size: 30px;
+		cursor: pointer;
+		line-height: 34px;
+		position: relative;
+		padding-left: 50px;
+		display: inline-block;
+		text-decoration: underline;
+
+		&:before {
+			top: 0;
+			left: 0;
+			width: 38px;
+			height: 34px;
+			content: " ";
+			position: absolute;
+			background: url("../img/sprite.png") 0 0 no-repeat;
+		}
+
+		&:hover {
+			color: #ff0000;
+			text-decoration: underline;
+
+			&:before {
+				background-position: -40px 0;
+			}
+		}
+	}
+
+	.registration-block {
+		right: 20px;
+		bottom: 50px;
+		width: 690px;
+		height: 150px;
+		position: absolute;
+
+		.form-reg {
+			width: 100%;
+			height: 100%;
+			display: block;
+			padding: 50px 0;
+			position: relative;
+
+			&:before {
+				top: 0;
+				left: 50px;
+				width: 590px;
+				content: " ";
+				position: absolute;
+				border-top: 1px solid #a26969;
+			}
+
+			&:after {
+				bottom: 0;
+				left: 50px;
+				width: 590px;
+				content: " ";
+				position: absolute;
+				border-top: 1px solid #a26969;
+			}
+		}
+
+		.input-reg {
+			float: left;
+			width: 480px;
+			height: 50px;
+			outline: none;
+			color: #a68c8d;
+			display: block;
+			font-size: 24px;
+			line-height: 28px;
+			padding: 10px 15px;
+			text-align: center;
+			background-image: none;
+			background: transparent;
+			border: 1px solid #a68c8d;
+			.placeholder(#a68c8d);
+		}
+
+		.btn-reg {
+			float: right;
+			color: #fff;
+			width: 180px;
+			height: 50px;
+			outline: none;
+			display: block;
+			cursor: pointer;
+			font-size: 30px;
+			padding: 5px 7px;
+			line-height: 38px;
+			text-align: center;
+			text-decoration: none;
+			border: 1px solid #7f5f60;
+			background: rgba(82,82,82, 0.5);
+
+			&:hover {
+				text-decoration: none;
+				background: rgba(82,82,82, 0.7);
+			}
+
+			&:active {
+				top: 1px;
+				position: relative;
+			}
+		}
+	}
+}
+
+
+
+/* Modal
+   ========================= */
+
+.login-block {
+	color: #fff;
+	width: 560px;
+	padding: 17px 15px;
+	background: #b61111;
+	border: 1px solid #000;
+
+	.form-title {
+		font-size: 28px;
+		line-height: 30px;
+		text-align: center;
+		margin-bottom: 18px;
+		padding-bottom: 10px;
+		background: url("../img/login-form-divider.png") center bottom no-repeat;
+	}
+
+	.form-group {
+		margin-bottom: 18px;
+	}
+
+	.login-label {
+		float: left;
+		width: 170px;
+		padding: 5px 0;
+		display: block;
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: right;
+	}
+
+	.login-input {
+		color: #000;
+		float: right;
+		width: 350px;
+		outline: none;
+		display: block;
+		font-size: 20px;
+		background: #fff;
+		line-height: 22px;
+		padding: 5px 15px;
+		border: 1px solid #fff;
+	}
+
+	.btn-login {
+		margin: 0;
+		color: #fff;
+		outline: none;
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 23px;
+		padding: 5px 50px;
+		text-align: center;
+		text-decoration: none;
+		background: transparent;
+		border: 2px solid #fff;
+		.border-radius(2px;);
+
+		&:hover {
+			background: #e40807;
+			text-decoration: none;
+		}
+
+		&:active {
+			top: 1px;
+			position: relative;
+		}
+	}
+}
+
+
+
+/* Typography
+   ========================= */
+
+h1, h2, h3, h4 {
+
+}
+
+p {
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+a {
+
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+.text-right {
+	text-align: center;
+}
