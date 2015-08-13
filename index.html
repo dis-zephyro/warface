@@ -13,6 +13,14 @@
         <link rel="stylesheet" href="js/vendor/jquery.fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient {
+                filter: none;
+            }
+        </style>
+        <![endif]-->
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     
@@ -20,7 +28,7 @@
         <div class="start">
             <div class="start-inner">
                 <div class="text-right">
-                    <a class="enter" href="#loginform">Войти</a>
+                    <a class="enter popup" href="#loginform">Войти</a>
                 </div>
                 <div class="registration-block">
                     <form class="form-reg clearfix">
@@ -31,20 +39,42 @@
             </div>
         </div>
 
+        <!-- Login form  -->
         <div class="hidden">
-            <div class="login-block" id="loginform">
+            <div class="popup-block" id="loginform">
                 <div class="form-title">Вход в личный кабинет</div>
-                <form class="form-login">
+                <form class="form-popup">
                     <div class="form-group clearfix">
-                        <label class="login-label">Email или логин:</label>
-                        <input type="text" name="login" class="login-input">
+                        <label class="popup-label">Email или логин:</label>
+                        <input type="text" name="login" class="popup-input">
                     </div>
                     <div class="form-group clearfix">
-                        <label class="login-label">Пароль:</label>
-                        <input type="text" name="login" class="login-input">
+                        <label class="popup-label">Пароль:</label>
+                        <input type="text" name="login" class="popup-input">
                     </div>
                     <div class="text-center">
-                        <button class="btn-login" type="submit">Готово</button>
+                        <button class="btn-popup" type="submit">Готово</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Video form  -->
+
+        <div class="hidden">
+            <div class="popup-block" id="loginform">
+                <div class="form-title">Вход в личный кабинет</div>
+                <form class="form-popup">
+                    <div class="form-group clearfix">
+                        <label class="popup-label">Email или логин:</label>
+                        <input type="text" name="login" class="popup-input">
+                    </div>
+                    <div class="form-group clearfix">
+                        <label class="popup-label">Пароль:</label>
+                        <input type="text" name="login" class="popup-input">
+                    </div>
+                    <div class="text-center">
+                        <button class="btn-popup" type="submit">Готово</button>
                     </div>
                 </form>
             </div>
