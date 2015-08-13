@@ -51,3 +51,60 @@ $(function(){
         });
     });
 });
+
+
+jQuery("#slider").slider({
+    min: 10,
+    max: 50,
+    values: [10,50],
+    range: true,
+    stop: function(event, ui) {
+        jQuery("input#minAge").val(jQuery("#slider").slider("values",0));
+        jQuery("input#maxAge").val(jQuery("#slider").slider("values",1));
+    },
+    slide: function(event, ui){
+        jQuery("input#minAge").val(jQuery("#slider").slider("values",0));
+        jQuery("input#maxAge").val(jQuery("#slider").slider("values",1));
+    }
+});
+
+
+jQuery("input#minAge").change(function(){
+    var value1=jQuery("input#minAge").val();
+    var value2=jQuery("input#maxAge").val();
+
+    if(parseInt(value1) > parseInt(value2)){
+        value1 = value2;
+        jQuery("input#minAge").val(value1);
+    }
+    jQuery("#slider").slider("values",0,value1);
+});
+
+
+jQuery("input#maxAge").change(function(){
+    var value1=jQuery("input#minAge").val();
+    var value2=jQuery("input#maxAge").val();
+
+    if (value2 > 1000) { value2 = 1000; jQuery("input#maxAge").val(1000)}
+
+    if(parseInt(value1) > parseInt(value2)){
+        value2 = value1;
+        jQuery("input#maxAge").val(value2);
+    }
+    jQuery("#slider").slider("values",1,value2);
+});
+
+
+// Закрыть чат
+
+
+
+$( ".partners-message" ).click(function(e){
+    e.preventDefault();
+    $( '.chat' ).show();
+});
+
+$( ".chat-close" ).click(function(e){
+    e.preventDefault();
+    $( '.chat' ).hide();
+});

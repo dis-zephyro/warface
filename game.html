@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="js/vendor/jquery.fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="js/vendor/jQueryFormStyle/jquery.formstyler.css">
+        <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.structure.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!--[if gte IE 9]>
@@ -64,15 +65,269 @@
         </div>
 
         <div class="filter">
-            <div class="container"
+            <div class="container">
+                <div class="filter-title">дополнительные фильтры<br/>по поиску союзников:</div>
+                <div class="filter-class">
+                    <label class="filter-label">Класс:</label>
+                    <select class="select">
+                        <option>-- Выберите класс --</option>
+                        <option class="icon-engineer">Инженер</option>
+                        <option class="icon-solder">Штурмовик</option>
+                        <option class="icon-medical">Медик</option>
+                        <option class="icon-sniper">Снайпер</option>
+                    </select>
+                </div>
+                <div class="filter-class">
+                    <label class="filter-label">Возраст:</label>
+                    <div class="formAge">
+                        <label for="minAge">от</label> <input type="text" id="minAge" value="10">
+                        <label for="maxAge">до</label> <input type="text" id="maxAge" value="80">
+                    </div>
+                    <div class="slide-control">
+                        <div id="slider"></div>
+                    </div>
+                </div>
+                <div class="filter-class">
+                    <label class="filter-label">Искать только::</label>
+                    <div class="filter-checkbox">
+                        <input id="check1" type="checkbox" name="check" value="check1">
+                        <label for="check1">Игроков, которые сейчас на сайте</label>
+                    </div>
+                </div>
+                <div class="filter-class last">
+                    <button type="submit" class="btn btn-done"><span>показать</span></button>
+                </div>
+            </div>
         </div>
 
         <div class="content content-bottom">
             <div class="container">
+                <div class="partners">
+                    <div class="rows clearfix">
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
 
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rows clearfix">
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rows clearfix">
+                    <div class="cols">
+                        <div class="partners-avatar">
+                            <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                            <div class="partners-status"></div>
+                        </div>
+                        <ul class="partners-text">
+                            <li class="partners-level">Уровень: 71</li>
+                            <li class="partners-name">Омикрон персей-8</li>
+                            <li  class="partners-class">Штурмовик / 40 лет</li>
+                            <li  class="partners-clan">мёртвые мертвецы</li>
+                            <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cols">
+                        <div class="partners-avatar">
+                            <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                            <div class="partners-status"></div>
+                        </div>
+                        <ul class="partners-text">
+                            <li class="partners-level">Уровень: 71</li>
+                            <li class="partners-name">Омикрон персей-8</li>
+                            <li  class="partners-class">Штурмовик / 40 лет</li>
+                            <li  class="partners-clan">мёртвые мертвецы</li>
+                            <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cols">
+                        <div class="partners-avatar">
+                            <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                            <div class="partners-status"></div>
+                        </div>
+                        <ul class="partners-text">
+                            <li class="partners-level">Уровень: 71</li>
+                            <li class="partners-name">Омикрон персей-8</li>
+                            <li  class="partners-class">Штурмовик / 40 лет</li>
+                            <li  class="partners-clan">мёртвые мертвецы</li>
+                            <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="rows clearfix">
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="cols">
+                            <div class="partners-avatar">
+                                <img class="img-responsive" src="images/avatar01.jpg" alt="">
+                                <div class="partners-status"></div>
+                            </div>
+                            <ul class="partners-text">
+                                <li class="partners-level">Уровень: 71</li>
+                                <li class="partners-name">Омикрон персей-8</li>
+                                <li  class="partners-class">Штурмовик / 40 лет</li>
+                                <li  class="partners-clan">мёртвые мертвецы</li>
+                                <li> <a class="partners-message" href="#">Написать сообщение</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li><a href="#">&#60;&#60;</a></li>
+                    <li><a href="#">&#60;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="current"><span>3</span></li>
+                    <li><a href="#">4</a></li>
+                    <li class="pagination-wrap">.....</li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">&#62;</a></li>
+                    <li><a href="#">&#62;&#62;</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer">
+            <div class="container">
+                <span class="dev">Веб-студия <a href="#">E-mind.ru</a></span>
+                <a href="#" class="dev-email">Написать письмо разработчику</a>
+            </div>
+        </div>
+
+        <div class="informer">
+            <div class="inner">
+                <div class="chat">
+                    <div class="chat-inner">
+                        <div class="chat-title">
+                            <div class="user-avatar">
+                                <img class="img-responsive" src="img/user-no-photo.jpg" alt="">
+                            </div>
+                            <div class="user-name">Иван Пупкин</div>
+                            <span class="chat-close"></span>
+                        </div>
+                        <div class="chat-content"></div>
+                        <div class="chat-new-message">
+                            <form class="chat-form">
+                                <input type="text" class="chat-form-message" name="message" autocomplete="off" placeholder="Сообщение...">
+                                <button class="btn btn-info" type="submit"  style="display: none;">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow"></div>
+                <ul class="people">
+                    <li style="height: 70px;"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="chat">
 
         </div>
 
@@ -138,6 +393,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
         <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/vendor/jQueryFormStyle/jquery.formstyler.min.js"></script>
         <script src="js/main.js"></script>
