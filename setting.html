@@ -45,8 +45,8 @@
                     <div class="row clearfix">
                         <div class="col50 clearfix">
                             <div id="inputPhoto" class="inputPhoto">
-                                <div class="fileformlabel" id="fileformlabel">Вставить фото</div>
-                                <input type="file" name="upload" class="upload" onchange="getName(this.value);" />
+                                <input type="file" name="upload" class="upload" id="upload" onchange="getName(this.value);" />
+                                <label class="fileformlabel" id="fileformlabel"  for="upload">Вставить фото</label>
                             </div>
                         </div>
                         <div class="col50">

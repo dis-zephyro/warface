@@ -109,12 +109,3 @@ $( ".chat-close" ).click(function(e){
     $( '.chat' ).hide();
 });
 
-
-$(".upload").mouseover(function () {
-    $(".fileformlabel").css('color','#fff');
-});
-
-$(".upload").mouseout(function () {
-    $(".fileformlabel").css('color','#000');
-});
-11
